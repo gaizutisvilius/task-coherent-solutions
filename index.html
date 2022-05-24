@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task for Coherent Solutions</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h4 class="heading">Shopping List</h4>
+
+        <form class="shopping-form">
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Name"
+            aria-label="Name"
+            required
+          />
+          <input
+            id="price"
+            name="price"
+            type="number"
+            step=".01"
+            placeholder="Price"
+            aria-label="Price"
+            required
+          />
+          <input
+            id="quantity"
+            name="quantity"
+            type="number"
+            placeholder="Quantity"
+            aria-label="Quantity"
+            required
+          />
+          <button class="btn" type="submit">Add</button>
+        </form>
+
+        <table id="table" class="shopping-list">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Amount</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody id="table__body"></tbody>
+          <tfoot>
+            <tr class="shopping-list__total-price"></tr>
+          </tfoot>
+        </table>
+
+        <div class="overlay"></div>
+        <div class="popup">
+          <h5 class="popup__title">Are you sure you want to delete milk?</h5>
+          <div class="popup__cta">
+            <button class="btn btn--continue">Yes</button>
+            <button class="btn btn--cancel">No</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="./index.js"></script>
+  </body>
+</html>
